@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: default
+data:
+  APP_ENV: "development"
+  APP_PORT: "8080"
+  MESSAGE: "Xin chào từ ConfigMap!" 
