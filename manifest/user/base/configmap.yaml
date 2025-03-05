@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: service-1-config
+  name: user-config
 data:
   PORT: "8080"
-  MESSAGE: "Hello from Service 1!" 
+  MESSAGE: "Hello from User!" 

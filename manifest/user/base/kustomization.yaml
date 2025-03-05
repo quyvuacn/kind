@@ -8,4 +8,4 @@ resources:
 
 commonLabels:
   app.kubernetes.io/name: user
-  app.kubernetes.io/part-of: microservices-demo 
+  app.kubernetes.io/part-of: p5gsi 

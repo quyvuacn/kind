@@ -1,7 +1,7 @@
 apiVersion: skaffold/v4beta7
 kind: Config
 metadata:
-  name: workspace
+  name: p5gsi
 build:
   artifacts:
   - image: user
@@ -19,6 +19,7 @@ manifests:
     - manifest/order/overlays/dev
 deploy:
   kubectl: {}
+  statusCheckDeadlineSeconds: 300
 portForward:
 - resourceType: service
   resourceName: user
