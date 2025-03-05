@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order
+spec:
+  selector:
+    matchLabels:
+      app: order
+  template:
+    metadata:
+      labels:
+        app: order
+    spec:
+      containers:
+      - name: order
+        image: order
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: order-config
+        env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: order-config
+              key: PORT 

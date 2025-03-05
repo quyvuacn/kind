@@ -1,0 +1,30 @@
+apiVersion: skaffold/v4beta7
+kind: Config
+metadata:
+  name: workspace
+build:
+  artifacts:
+  - image: user
+    context: user
+    docker:
+      dockerfile: Dockerfile
+  - image: order
+    context: order
+    docker:
+      dockerfile: Dockerfile
+manifests:
+  kustomize:
+    paths:
+    - manifest/user/overlays/dev
+    - manifest/order/overlays/dev
+deploy:
+  kubectl: {}
+portForward:
+- resourceType: service
+  resourceName: user
+  port: 30001
+  localPort: 30001
+- resourceType: service
+  resourceName: order
+  port: 30002
+  localPort: 30002 
