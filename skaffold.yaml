@@ -8,10 +8,18 @@ build:
     context: user
     docker:
       dockerfile: Dockerfile
+    sync:
+      manual:
+      - src: 'user/**'
+        dest: .
   - image: order
     context: order
     docker:
       dockerfile: Dockerfile
+    sync:
+      manual:
+      - src: 'order/**'
+        dest: .
 manifests:
   kustomize:
     paths:
