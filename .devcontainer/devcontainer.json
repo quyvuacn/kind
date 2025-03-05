@@ -11,7 +11,8 @@
             "dockerDashComposeVersion": "v2"
         },
         "ghcr.io/devcontainers/features/common-utils:2": {},
-        "ghcr.io/mpriscella/features/kind:1": {}
+        "ghcr.io/mpriscella/features/kind:1": {},
+        "ghcr.io/rio/features/skaffold:2": {}
     },
     "customizations": {
         "vscode": {
