@@ -31,16 +31,8 @@ deploy:
 portForward:
 - resourceType: service
   resourceName: user
-  port: 30001
-  localPort: 30001
-- resourceType: service
-  resourceName: user
   port: 32345
   localPort: 32345
-- resourceType: service
-  resourceName: order
-  port: 30002
-  localPort: 30002
 - resourceType: service
   resourceName: order
   port: 32346
