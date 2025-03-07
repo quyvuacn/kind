@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -14,6 +15,8 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		time.Sleep(10 * time.Second)
+		fmt.Println("Hello from Order service!")
 		fmt.Fprintf(w, "Hello from Order service!")
 	})
 

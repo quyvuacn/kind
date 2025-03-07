@@ -5,8 +5,13 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
+  - name: http
+    port: 8080
     targetPort: 8080
     nodePort: 30002
+  - name: debug
+    port: 2346
+    targetPort: 2346
+    nodePort: 32346
   selector:
-    app: order 
+    app: order

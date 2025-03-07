@@ -6,8 +6,14 @@ nodes:
   - containerPort: 30001
     hostPort: 30001
     protocol: TCP
+  - containerPort: 32345
+    hostPort: 32345
+    protocol: TCP
   - containerPort: 30002
     hostPort: 30002
+    protocol: TCP
+  - containerPort: 32346
+    hostPort: 32346
     protocol: TCP
   extraMounts:
   - hostPath: /workspace

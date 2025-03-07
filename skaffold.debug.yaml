@@ -1,4 +1,3 @@
-# skaffold.debug.yaml
 apiVersion: skaffold/v4beta7
 kind: Config
 metadata:
@@ -36,13 +35,13 @@ portForward:
   localPort: 30001
 - resourceType: service
   resourceName: user
-  port: 2345
-  localPort: 2345
+  port: 32345
+  localPort: 32345
 - resourceType: service
   resourceName: order
   port: 30002
   localPort: 30002
 - resourceType: service
   resourceName: order
-  port: 2345
-  localPort: 2346
+  port: 32346
+  localPort: 32346

@@ -6,8 +6,14 @@
         "type": "go",
         "request": "attach",
         "mode": "remote",
-        "remotePath": "/app",
-        "port": 2345,
+        "remotePath": "/workspace",
+        "substitutePath": [
+          {
+            "from": "/workspace/cmd",
+            "to": "${workspaceFolder}/user/cmd"
+          }
+        ],
+        "port": 32345,
         "host": "127.0.0.1",
         "showLog": true,
         "trace": "verbose"
@@ -17,8 +23,14 @@
         "type": "go",
         "request": "attach",
         "mode": "remote",
-        "remotePath": "/app",
-        "port": 2346,
+        "remotePath": "/workspace",
+        "substitutePath": [
+          {
+            "from": "/workspace/cmd",
+            "to": "${workspaceFolder}/order/cmd"
+          }
+        ],
+        "port": 32346,
         "host": "127.0.0.1",
         "showLog": true,
         "trace": "verbose"
