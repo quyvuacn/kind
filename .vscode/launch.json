@@ -6,11 +6,10 @@
         "type": "go",
         "request": "attach",
         "mode": "remote",
-        "remotePath": "/workspace",
         "substitutePath": [
           {
-            "from": "/workspace/cmd",
-            "to": "${workspaceFolder}/user/cmd"
+            "from": "/workspace/user",
+            "to": "/workspace"
           }
         ],
         "port": 32345,
@@ -23,11 +22,10 @@
         "type": "go",
         "request": "attach",
         "mode": "remote",
-        "remotePath": "/workspace",
         "substitutePath": [
           {
-            "from": "/workspace/cmd",
-            "to": "${workspaceFolder}/order/cmd"
+            "from": "/workspace/order",
+            "to": "/workspace"
           }
         ],
         "port": 32346,
